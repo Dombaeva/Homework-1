@@ -28,7 +28,7 @@ public class Task3 {
 
     private static void getVanyaAccount(double vanyaAccount, int interval, int salary, int totalMonths, int salaryIncreaseAmount, double investmentPercent, int expenses, double brokerAccount, double investmentReturn) {
         for (int i = 1; i <= totalMonths; i++) {
-            if (i % 6 == 0) {
+            if (i % interval == 0) {
                 salary += salaryIncreaseAmount;
             }
             double investment = salary * investmentPercent;
