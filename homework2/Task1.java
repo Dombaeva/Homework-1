@@ -14,32 +14,21 @@ public class Task1 {
         Scanner scanner = new Scanner(System.in);
         System.out.println("Integer: ");
         final int value = scanner.nextInt();
-        System.out.println("Количество четных цифр: " + evenNumbers(value));
-        System.out.println("Количество нечетных цифр: " + oddNumbers(value));
+        countNumbers(value);
     }
 
-    private static int evenNumbers(int value) {
+    private static void countNumbers(int value) {
         int evenCount = 0;
-        for (int i = value; i != 0; i /= 10) {
-           int result = i % 10;
-            if (result % 2 == 0) {
-                evenCount++;
-            }
-        }
-        return evenCount;
-    }
-
-    private static int oddNumbers(int value) {
         int oddCount = 0;
         for (int i = value; i != 0; i /= 10) {
             int result = i % 10;
-            if (result % 2 == 1) {
+            if (result % 2 == 0) {
+                evenCount++;
+            } else if (result % 2 == 1) {
                 oddCount++;
             }
         }
-        return oddCount;
+        System.out.println("Количество четных цифр: " + evenCount);
+        System.out.println("Количество нечетных цифр: " + oddCount);
     }
-
-
-
 }
