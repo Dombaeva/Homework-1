@@ -67,5 +67,3 @@ public class Task3Arrays {
     }
 }
 
-
-
